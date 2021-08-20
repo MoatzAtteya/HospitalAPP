@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="bottom"
+    android:background="@color/light_blue"
+    >
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/person"
+        android:layout_marginTop="15dp"
+        android:contentDescription="user image"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor_name"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:id="@+id/doctorname_nav_text"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/doctor_email_nav_text"
+        android:textColor="@color/black"
+        android:text="doctor_name@email.com"
+        android:paddingTop="8dp"
+        android:textSize="15sp"/>
+
+
+
+</LinearLayout>

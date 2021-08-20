@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_card_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="5dp"
+            card_view:cardUseCompatPadding="true"
+            android:backgroundTint="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@color/white"
+                >
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_person_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MY Profile:"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="20dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Profile"
+                    android:id="@+id/doctor_upateProfile_btn"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/light_blue"
+                    android:layout_marginLeft="7dp"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/appoinment_card_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="5dp"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@+id/profile_card_view_id"
+            android:backgroundTint="@color/white"
+
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                >
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="35dp"
+                    android:src="@drawable/ic_baseline_history_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Appointments:"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="20dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Appointments History"
+                    android:id="@+id/doctor_viewAppoinment_btn"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/light_blue"
+                    android:layout_marginLeft="7dp"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addPatient_card_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="5dp"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@+id/appoinment_card_view_id"
+            android:backgroundTint="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                >
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_baseline_person_add_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Patient:"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="10dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Patient Here"
+                    android:id="@+id/doctor_addPatient_btn"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/light_blue"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/managePatient_card_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="5dp"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@+id/addPatient_card_view_id"
+            android:backgroundTint="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                >
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_baseline_person_add_disabled_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Patient:"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="10dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Patient Here"
+                    android:id="@+id/doctor_managePatient_btn_dashboard"
+                    android:fontFamily="@font/paytone_one"
+                    android:textColor="@color/light_blue"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

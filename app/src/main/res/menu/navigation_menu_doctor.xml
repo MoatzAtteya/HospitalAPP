@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:title="Dashboard"
+            android:id="@+id/doctor_dashboard_nav_btn"
+            android:icon="@drawable/ic_baseline_history_24"/>
+
+        <item
+            android:title="Appoinment History"
+            android:id="@+id/doctor_AppoinmentHistory_nav_btn"
+            android:icon="@drawable/ic_baseline_history_24"/>
+
+        <item
+            android:title="Add Patient"
+            android:id="@+id/doctor_AddPatient_nav_btn"
+            android:icon="@drawable/ic_baseline_person_add_24"/>
+
+        <item
+            android:title="Manage Patient"
+            android:id="@+id/doctor_EditPatient_nav_btn"
+            android:icon="@drawable/ic_person_24"/>
+
+
+    </group>
+
+    <item android:title="Profile"
+         android:iconTint="@color/black">
+
+        <menu>
+            <item android:title="My Profile"
+                android:icon="@drawable/person"
+                android:id="@+id/doctor_myProfile_nav_btn"/>
+
+            <item android:title="Change Password"
+                android:icon="@drawable/ic_security_24"
+                android:id="@+id/doctor_changePass_nav_btn"/>
+
+            <item android:title="Log Out"
+                android:icon="@drawable/ic_baseline_login_24"
+                android:id="@+id/doctor_logOut_nav_btn"/>
+
+        </menu>
+
+    </item>
+
+
+</menu>

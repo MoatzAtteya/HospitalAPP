@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="Dashboard"
+            android:id="@+id/dashboard_nav_btn"
+            android:icon="@drawable/ic_baseline_home_24"/>
+        <item
+            android:title="Book Appoinment"
+            android:id="@+id/bookAppoinment_nav_btn"
+            android:icon="@drawable/ic_baseline_book_online_24"/>
+        <item
+            android:title="Appoinment History"
+            android:id="@+id/AppoinmentHistory_nav_btn"
+            android:icon="@drawable/ic_baseline_history_24"/>
+        <item
+            android:title="Medical History"
+            android:id="@+id/medicalHistory_nav_btn"
+            android:icon="@drawable/ic_baseline_history_24"/>
+
+    </group>
+
+    <item android:title="Profile"
+         android:iconTint="@color/black">
+
+        <menu>
+            <item android:title="My Profile"
+                android:icon="@drawable/person"
+                android:id="@+id/myProfile_nav_btn"/>
+
+            <item android:title="Change Password"
+                android:icon="@drawable/ic_security_24"
+                android:id="@+id/changePass_nav_btn"/>
+
+            <item android:title="Log Out"
+                android:icon="@drawable/ic_baseline_login_24"
+                android:id="@+id/logOut_nav_btn"/>
+
+        </menu>
+
+    </item>
+
+
+</menu>

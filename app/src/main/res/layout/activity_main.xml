@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="MainActivityViewModel"
+            type="com.example.hospialapp.MainActivityViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".main.MainActivity">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/blue_view"
+            android:background="@color/light_blue" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/wave_header"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/blue_view"
+            android:src="@drawable/wave_header" />
+
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="250dp"
+            android:id="@+id/doctorsImage"
+            android:src="@drawable/doctors_stuff"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorsImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/paytone_one"
+            android:text="Hospital App"
+            android:textStyle="bold"
+            android:textColor="@color/blue_text"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:id="@+id/login_text"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/paytone_one"
+            android:layout_marginTop="340dp"
+            android:textColor="@color/light_blue"
+            android:layout_centerHorizontal="true" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username_loginLayout"
+            android:layout_below="@id/login_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/username_loginInput"
+                android:hint="Username"
+                android:drawableLeft="@drawable/ic_person_24"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:inputType="text"
+                android:textSize="20sp"
+                android:text="@={MainActivityViewModel.userName}"
+                android:textColor="@color/gray"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_loginLayout"
+            android:layout_below="@id/username_loginLayout"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password_loginInput"
+                android:hint="Password"
+                android:textColor="@color/gray"
+                android:fontFamily="sans-serif-medium"
+                android:drawableLeft="@drawable/ic_security_24"
+                android:drawablePadding="5dp"
+                android:inputType="textPassword"
+                android:text="@={MainActivityViewModel.password}"
+                android:textSize="20sp"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/logInBtns_layout"
+                android:layout_below="@+id/password_loginLayout">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_btn"
+            android:text="Log in"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_text"
+            android:layout_marginLeft="55dp"
+            android:onClick="@{()->MainActivityViewModel.onLoginClick()}"
+            android:background="@color/light_blue" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/doctor_login_btn"
+            android:layout_marginLeft="10dp"
+            android:text="Doctor Log in"
+            android:padding="10dp"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_text"
+            android:onClick="@{()->MainActivityViewModel.onDoctorLoginClick()}"
+            android:background="@color/light_blue" />
+            </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_below="@id/logInBtns_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dontHaveAcoount_text"
+            android:text="Dont have an account"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/light_blue2"
+            android:textSize="20sp"
+            android:fontFamily="@font/paytone_one"
+            android:layout_gravity="center"
+            android:layout_marginLeft="45dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_account_btn"
+            android:text="sign up"
+            android:textSize="17sp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/light_blue"
+            android:fontFamily="@font/paytone_one"
+            android:layout_gravity="center"
+            android:onClick="@{()->MainActivityViewModel.onCreateBtnClick()}"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+       </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>

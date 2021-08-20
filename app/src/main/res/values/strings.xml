@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HospitalAPP</string>
+    <string name="opening_nav">opening</string>
+    <string name="closing_nav">closing navigation</string>
+    <string-array name="doctor_specials">
+        <item>Gynecologis/Obsterician</item>
+        <item>General Physician</item>
+        <item>Dermatologist</item>
+        <item>Homeopath</item>
+        <item>Ayurveda</item>
+        <item>Dentist</item>
+        <item>Ear-Nose-Throat(Ent) Specialist</item>
+        <item>Demo test</item>
+        <item>Bones Specialist</item>
+        <item>Dermatologist</item>
+        <item>Cardiology</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
